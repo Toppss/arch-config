@@ -87,10 +87,10 @@ create_pool () {
     
     # Create ZFS pool
     print "Create ZFS pool"
-    zpool create -f -o ashift=12                          \
+    zpool create -f -o ashift=13                          \
                  -o autotrim=on                           \
                  -O acltype=posixacl                      \
-                 -O compression=zstd                      \
+                 -O compression=lz4                       \
                  -O relatime=on                           \
                  -O xattr=sa                              \
                  -O dnodesize=legacy                      \
@@ -100,7 +100,6 @@ create_pool () {
                  -O normalization=formD                   \
                  -O mountpoint=none                       \
                  -O canmount=off                          \
-                 -O devices=off                           \
                  -R /mnt                                  \
                  zroot "$ZFS"
 }
