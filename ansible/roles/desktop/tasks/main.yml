@@ -2,20 +2,8 @@
 - name: install desktop packages
   pacman:
     name:
-      - sway
-      - swaybg
       - xorg-server-xwayland
-      - waybar
-      - mako # notification daemon
-      - kanshi # autorandr for wayland
-      - grim # screenshots
-      - slurp # region selector
-      - wl-clipboard # clipboard manager
-      - brightnessctl # brightness manager
-      - wofi # rofi for wayland
-      - swayidle
       - xdg-user-dirs
-      - xdg-desktop-portal-wlr
     state: present
 
 - name: install video packages
@@ -28,6 +16,12 @@
       - lib32-vulkan-intel
       - intel-media-driver
       - libva-utils
+      - vulkan-headers
+      - vulan-icd-loader
+      - vulkan-mesa-layers
+      - vulkan-radeon
+      - vulkan-tools
+      - vulkan-validation-layers
     state: present
 
 - name: install audio packages
@@ -52,14 +46,11 @@
       - gnome-keyring # evolution gnome keyring
       - seahorse # keyring manager
       - firefox
-      - firefox-i18n-fr
       - flatpak # package manager
       - gimp # img editor
       - kolourpaint # img editor
       - shotwell # photo manager
-      - libreoffice-still-fr # libreoffice suite fr
-      - lollypop # music player
-      - lxappearance # theme manager
+      - libreoffice-still # libreoffice suite
       - mpv # video player
       - nemo # file manager
       - tumbler # thumbnailer
@@ -69,20 +60,19 @@
       - rdesktop # remote desktop client
       - remmina # remote desktop client
       - freerdp # remmina dep for rdp
-      - steam # games manager
-      - transmission-gtk # torrent downloader
-      - texlive-bin # latex
-      - texlive-core # latex
-      - texlive-latexextra # latex
-      - texlive-fontsextra # latex
-      - variety # random backgrounds
-      - papirus-icon-theme # icon theme
       - gnome-themes-extra # gtk themes
       #- x2goclient
       - youtube-dl
       - gopass # password manager
       - okular # pdf editor, no image overlay
       - xournalpp # pdf editor, no form
+      - wezterm
+      - cockpit
+      - cockpit-machines
+      - cockpit-podman
+      - cockpit-packagekit
+      - dolphin
+      
     state: present
 
 - name: add missing gpg keys for aur
@@ -98,30 +88,34 @@
   aur:
     skip_installed: true
     name:
-      - adapta-gtk-theme #https://github.com/Alexays/Waybar/issues/515
-      - equilux-theme
-      - wdisplays-git # arandr for wayland
       - wf-recorder-git # screen recorder for wayland
       - grimshot-git # grim+slurp wrapper
       - waypipe # wayland ssh -X
-      - wob # bars for wayland
-      - connman-gtk # connman gtk gui
       #- gnome-ssh-askpass2 # ssh askpass gui
       - google-chrome
       - adb-sync-git # android dir sync
       - downgrade # package downgrader
       - lf # cli file manager
-      - molotov # french tv wrapper
       - otf-font-awesome
       #- ttf-impallari-cabin-font # xelatex cv
       - pastel # color viewer
-      - tiny-irc-client-git
-      - starleaf-breeze
       - swappy # screenshot editor
-      - senpai-irc # irc client for soju
-      - rbenv # ruby env manager
       - iwgtk # gui for iwd
       #- phockup # picture sorting tool
+      - android-sdk-platform-tools
+      - openrgb
+      - waynergy-git
+      - thorium-browser-bin
+      - fastfetch-git
+      - cava-git
+      - logiops
+      - looking-glass
+      - cockpit-zfs-manager
+      - sdbus-cpp-git #dependency of hyprland gtk portal git
+      - hyprland-git
+      - xdg-portal-hyprland-git
+      - nwg-look
+      - nwg-displays
 
 - name: test swaylock-fancy
   stat:
