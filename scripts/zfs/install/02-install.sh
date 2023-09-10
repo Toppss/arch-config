@@ -33,6 +33,8 @@ pacstrap /mnt       \
   base-devel        \
   linux-lts         \
   linux-lts-headers \
+  linux-zen         \
+  linux-zen-headers \
   linux-firmware    \
   intel-ucode       \
   efibootmgr        \
