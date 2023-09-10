@@ -1,3 +1,5 @@
+PS I didn't write this script, forked from eoli3n. He's smart; if you want this setup, fork from him because I know nothing and am a potato.
+
 ### ZFS root features
 
 - Native encryption aes-256-gcm
