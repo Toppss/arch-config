@@ -17,6 +17,7 @@
       - noto-fonts         # unicode font
       - noto-fonts-emoji   # emojis
       # Shell
+      - zsh                # shell for sane people
       - fish               # powerful shell
       - starship           # cross-shell prompt
       - git                #
