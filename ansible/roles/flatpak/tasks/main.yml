@@ -18,14 +18,12 @@
     state: present
     remote: flathub
   loop:
-    - com.spotify.Client
-    - com.vscodium.codium
+    - com.valvesoftware.Steam
+    - net.lutris.Lutris
     - com.mojang.Minecraft
-    - com.github.Anuken.Mindustry
-    - us.zoom.Zoom
-    - fi.skyjake.Lagrange # gemini browser
-    - net.xmind.XMind # mind mapping
-    #- com.microsoft.Teams
+    - com.github.tchx84.Flatseal
+    - io.github.tdesktop_x64.TDesktop
+    - org.telegram.desktop.webview
 
 - name: Install flatpak beta packages
   community.general.flatpak:
@@ -33,7 +31,7 @@
     state: present
     remote: flathub-beta
   loop:
-    - org.freecadweb.FreeCAD
+   # - org.freecadweb.FreeCAD
 
 #- name: Override Teams perms
 #  shell: |
@@ -42,7 +40,3 @@
 #      --filesystem=~/img:ro \
 #      --filesystem=~/downloads:ro \
 #      --filesystem=~/share:ro
-
-- name: zoom screen sharing
-  shell : |
-    flatpak override --env=XDG_CURRENT_DESKTOP=GNOME us.zoom.Zoom
