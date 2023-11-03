@@ -18,13 +18,14 @@
     state: present
     remote: flathub
   loop:
-    - com.valvesoftware.Steam
-    - net.lutris.Lutris
-    - com.mojang.Minecraft
     - com.github.tchx84.Flatseal
     - io.github.tdesktop_x64.TDesktop
-    - org.telegram.desktop.webview
-
+    - net.davidotek.pupgui2
+    - com.dec05eba.gpu_screen_recorder
+    - org.mozilla.firefox
+    - org.ferdium.Ferdium 
+    - com.notesnook.Notesnook
+    
 - name: Install flatpak beta packages
   community.general.flatpak:
     name: '{{ item }}'
