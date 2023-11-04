@@ -79,7 +79,6 @@
       - lib32-virtualgl    #
       - libva-utils        #
       - vulkan-headers     #
-      - vulan-icd-loader   #
       - vulkan-mesa-layers #
       - vulkan-radeon      #
       - vulkan-tools       #
