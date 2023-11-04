@@ -80,6 +80,7 @@
       - libva-utils        #
       - vulkan-headers     #
       - vulkan-mesa-layers #
+      - vulkan-icd-loader  #
       - vulkan-radeon      #
       - vulkan-tools       #
       - vulkan-validation-layers #
