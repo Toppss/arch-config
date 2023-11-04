@@ -21,4 +21,4 @@
   copy:
     dest: /etc/modprobe.d/kvm.conf
     content: | 
-      options kvm_intel nested=1
+      options kvm_amd nested=1
