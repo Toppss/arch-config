@@ -63,8 +63,6 @@
       - rclone             # sync tool
       - syncthing          # sync tool
       - vdirsyncer         # sync tool
-      - khal               # cli calendar manager
-      - khard              # cli contacts manager
       - words              # dictionnaries
       - fzf                # fuzzy finder
       - neofetch           #
