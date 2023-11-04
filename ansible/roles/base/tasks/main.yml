@@ -76,19 +76,16 @@
       - dmidecode          # dump dmi table content
       - python-pre-commit  # pre-commit hook manager
       - zim                # wiki app
-      - mesa
-      - mesa-demos
-      - lib32-virtualgl
-      - vulkan-intel
-      - lib32-vulkan-intel
-      - intel-media-driver
-      - libva-utils
-      - vulkan-headers
-      - vulan-icd-loader
-      - vulkan-mesa-layers
-      - vulkan-radeon
-      - vulkan-tools
-      - vulkan-validation-layers
+      - mesa               #
+      - mesa-demos         #
+      - lib32-virtualgl    #
+      - libva-utils        #
+      - vulkan-headers     #
+      - vulan-icd-loader   #
+      - vulkan-mesa-layers #
+      - vulkan-radeon      #
+      - vulkan-tools       #
+      - vulkan-validation-layers #
     state: present
 
 - name: Configure root
